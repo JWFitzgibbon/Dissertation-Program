@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+
+  <!-- Import of xmlns filespace allows for packages to be imported -->
+  <import xmlns="http://sweet_swt.sf.net/xswt">
+    <!-- Necessary packages/plug-in extensions required for the Google Home info page -->
+    <package name="java.lang"/>
+    <package name="org.eclipse.swt.widgets" />
+    <package name="org.eclipse.swt.graphics" />
+    <package name="org.eclipse.swt.layout" />
+  </import>
+  
+  <!-- Sets widget layout to 'GridLayout' and sets columns to 1, multiple columns aren't needed in info pages as text labels are sufficient -->
+  <layout x:class="GridLayout" numColumns="1"/>
+  
+  <!-- Child elements containing all the recorded device information for the Meeting Owl Pro -->
+  <x:children>
+    <label text="SoC: 		Qualcomm QCS605 SoC"/>
+    <label text="Wi-Fi Standard:		802.11ac"/>
+    <label text="Maximum Data Rate:	867Mbps 2x2 MIMO 5GHz"/>
+    <label text="Security Protocol(s): 	WPA2 Personal"/>
+  </x:children>
+  
+</xswt>

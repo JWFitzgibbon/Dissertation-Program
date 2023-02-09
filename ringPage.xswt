@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+
+  <!-- Import of xmlns filespace allows for packages to be imported -->
+  <import xmlns="http://sweet_swt.sf.net/xswt">
+    <package name="java.lang"/>
+    <package name="org.eclipse.swt.widgets" />
+    <package name="org.eclipse.swt.graphics" />
+    <package name="org.eclipse.swt.layout" />
+  </import>
+  
+  <!-- Sets widget layout to 'GridLayout' and sets columns to 1, multiple columns aren't needed in info pages as text labels are sufficient -->
+  <layout x:class="GridLayout" numColumns="1"/>
+  
+  <!-- Child elements containing all the recorded device information for the Ring Doorbell Pro -->
+  <x:children>
+    <label text="SoC: 		Ambarella S2L IP Camera Processor "/>
+    <label text="Memory: 		SK Hynix H27U2G8F2CTR-BC"/>
+    <label text="DRAM: 		SK Hynix H5TC2G63FFR-PBA DRAM "/>
+    <label text="Wi-Fi Standard:		802.11b/g/n"/>
+    <label text="Maximum Data Rate:	72Mbps 1x1 MIMO 2.4GHz"/>
+    <label text="Minimum Data rate:	2Mbps"/>
+    <label text="Security Protocol(s): 	E2EE"/>
+  </x:children>
+  
+</xswt>

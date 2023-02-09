@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+
+  <!-- Import of xmlns filespace allows for packages to be imported -->
+  <import xmlns="http://sweet_swt.sf.net/xswt">
+    <!-- Necessary packages/plug-in extensions required for the Google Home info page -->  
+    <package name="java.lang"/>
+    <package name="org.eclipse.swt.widgets" />
+    <package name="org.eclipse.swt.graphics" />
+    <package name="org.eclipse.swt.layout" />
+  </import>
+  
+  <!-- Sets widget layout to 'GridLayout' and sets columns to 1, multiple columns aren't needed in info pages as text labels are sufficient -->
+  <layout x:class="GridLayout" numColumns="1"/>
+  
+  <!-- Child elements containing all the recorded device information for the Google Home -->
+  <x:children>
+    <label text="SoC: 		Marvell Avastar 88W8887 WLAN/BT/NFC SoC"/>
+    <label text="Processor: 	Marvell 88DE3006 Armada 1500 Mini Plus dual-core ARM Cortex-A7 media processor"/>
+    <label text="Memory: 		Toshiba TC58NVG1S3HBA16 256 MB NAND flash"/>
+    <label text="RAM: 		Samsung K4B4G16 512MB B-Die DDR3 SDRAM"/>
+    <label text="Wi-Fi Standard:		802.11a/b/n/ac"/>
+    <label text="Maximum Data Rate:	866.7Mbps 2x2 MIMO 5GHz"/>
+    <label text="Security Protocol(s): 	WPA2, WPA3 (Optional)"/>
+  </x:children>
+  
+</xswt>

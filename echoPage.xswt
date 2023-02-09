@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+
+  <!-- Import of xmlns filespace allows for packages to be imported -->
+  <import xmlns="http://sweet_swt.sf.net/xswt">
+  <!-- Necessary packages/plug-in extensions required for the Amazon Echo info page -->
+    <package name="java.lang"/>
+    <package name="org.eclipse.swt.widgets" />
+    <package name="org.eclipse.swt.graphics" />
+    <package name="org.eclipse.swt.layout" />
+  </import>
+  
+  <!-- Sets widget layout to 'GridLayout' and sets columns to 1, multiple columns aren't needed in info pages as text labels are sufficient -->
+  <layout x:class="GridLayout" numColumns="1"/>
+  
+  <!-- Child elements containing all the recorded device information for the Amazon Echo Gen 1 -->
+  <x:children>
+  
+    <label text="NIC: 		Qualcomm Atheros QCA6234X-AM2D Wi-Fi and Bluetooth Module"/>
+    <label text="Processor: 	Texas Instruments DM3725"/>
+    <label text="Power Unit: 	Texas Instruments TPS65910A1 Integrated Power Management IC"/>
+    <label text="Memory: 		SanDisk SDIN7DP2-4G 4 GB iNAND Ultra Flash Memory"/>
+    <label text="RAM: 		Samsung K4X2G323PD-8GD8 256 MB LPDDR1 RAM"/>
+    <label text="Wi-Fi Standard:		802.11a/b/g/n"/>
+    <label text="Maximum Data Rate:	450Mbps 3x3 MIMO 5GHz"/>
+    <label text="Minimum data rate:	0.51Mbps"/>
+    <label text="Security Protocol(s): 	WPA2"/>
+    
+  </x:children>
+  
+</xswt>

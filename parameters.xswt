@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+
+  <!-- Import of xmlns filespace allows for packages to be imported -->
+  <import xmlns="http://sweet_swt.sf.net/xswt">
+  <!-- Necessary packages/plug-in extensions required for the parameters page -->
+  <!-- See chapter 6 "Product Design Process" for details on packages -->
+    <package name="java.lang"/>
+    <package name="org.eclipse.swt.widgets" />
+    <package name="org.eclipse.swt.graphics" />
+    <package name="org.eclipse.swt.layout" />
+    <package name="org.omnetpp.common.wizard.support" />
+    <package name="org.omnetpp.ned.editor.wizards.support" />
+    <package name="org.omnetpp.cdt.wizard.support" />
+  </import>
+  
+  <!-- Specifies 'GridLayout' as the widget layout type, number of columns is set to 2 -->
+  <layout x:class="GridLayout" numColumns="2"/>
+  
+  <!-- The child elements -->
+  <x:children>
+
+	<!-- Where the user selects the device to simulate, text label gives context to the user -->
+	<!-- Default is 'EchoGen1' -->
+  	<label text="Device type:"/>
+  	<!-- Combo element of all the sample devices, selected string is saved in the 'deviceType' ID -->
+    <combo x:id="deviceType" x:style="BORDER">
+    	<add x:p0="EchoGen1"/>
+    	<add x:p0="GoogleHome"/>
+    	<add x:p0="MeetingOwlPro"/>
+    	<add x:p0="WyzeCamV3"/>
+    	<add x:p0="RingDoorbellPro"/>
+    	<add x:p0="AugustSmartLock"/>
+    </combo>
+
+	<!-- The Wi-Fi standard or 'opMode' for the simulation network -->
+	<!-- Default is 'g(mixed)' -->
+    <label text="802.11 Standard:"/>
+    <!-- Combo element of all the standards supported by OMNeT++, selected string is saved in the 'wifiStandard' ID -->
+    <combo x:id="wifiStandard" x:style="BORDER">
+        <add x:p0="a"/>
+        <add x:p0="b"/>
+        <add x:p0="g(erp)"/>
+        <add x:p0="g(mixed)"/>
+        <add x:p0="n(mixed-2.4Ghz)"/>
+        <add x:p0="ac"/>
+    </combo>
+
+	<!-- A spinner element of numbers increasing in increments of 1 from 1 to 9999, user can also type the number directly -->
+	<!-- Default is '1' -->
+    <label text="Simulation time (<10 recommended):"/>
+    	<spinner x:id="simTime" x:style="BORDER" minimum="1" maximum="9999" increment="1"/>
+
+	<!-- Where the device appears in the simulation GUI, 'none' places it in the default location specified in the NED file -->
+	<!-- 'Random' calls the 'Math.random()' function for random placement within the lower half of the GUI -->
+	<!-- Default is 'none' -->
+    <label text="IoT device placement:"/>
+    <combo x:id="placement" x:style="BORDER|READ_ONLY">
+        <add x:p0="random"/>
+        <add x:p0="none"/>
+    </combo>
+    
+  </x:children>
+  
+</xswt>

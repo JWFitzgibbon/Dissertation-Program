@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xswt xmlns:x="http://sweet_swt.sf.net/xswt">
+
+  <!-- Import of xmlns filespace allows for packages to be imported -->
+  <import xmlns="http://sweet_swt.sf.net/xswt">
+    <package name="java.lang"/>
+    <package name="org.eclipse.swt.widgets" />
+    <package name="org.eclipse.swt.graphics" />
+    <package name="org.eclipse.swt.layout" />
+  </import>
+  
+  <!-- Sets widget layout to 'GridLayout' and sets columns to 1, multiple columns aren't needed in info pages as text labels are sufficient -->
+  <layout x:class="GridLayout" numColumns="1"/>
+  
+  <!-- Child elements containing all the recorded device information for the August Wi-Fi Smart Lock -->
+  <x:children>
+    <label text="NIC: 	Cypress CYW43012"/>
+    <label text="SoC: 	Cypress PSoC 6"/>
+    <label text="Wi-Fi Standard:		802.11n/ac-friendly"/>
+    <label text="Maximum Data Rate:	78Mbps 1x1 MIMO 2.4GHz"/>
+    <label text="Security Protocol(s): 	WPA2"/>
+  </x:children>
+  
+</xswt>
